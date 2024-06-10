@@ -2,7 +2,7 @@
 import { useEffect, useState } from "react";
 import NewsItem from "./NewsItem";
 
-const NewsBoard = ({ country, category }) => {
+const NewsBoard = ({  category }) => {
 
   const [articel, setArticel] = useState([])
   const [show, setShow] = useState(false)
@@ -14,7 +14,7 @@ const NewsBoard = ({ country, category }) => {
   }
 
   useEffect(() => {
-    let URL = `https://newsapi.org/v2/top-headlines?country=${country}&category=${category}&apiKey=${import.meta.env.VITE_API_KEY}`
+    let URL = `https://newsapi.org/v2/top-headlines?country=in&category=${category}&apiKey=${import.meta.env.VITE_API_KEY}`
     fetchData(URL)
     setShow(true)
   }, [category])

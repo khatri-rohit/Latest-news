@@ -4,12 +4,11 @@ import NewsBoard from "./Components/NewsBoard";
 
 const App = () => {
   const [category, setCategory] = useState('technology')
-  const [country, setCountry] = useState('in')
 
   return (
     <div className="">
       <Navbar setCategory={setCategory} />
-      <NewsBoard category={category} country={country} />
+      <NewsBoard category={category} />
     </div>
   );
 };
